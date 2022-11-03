@@ -32,6 +32,7 @@ const filmes = [
   },
 ];
 
+//Enunciado 2
 const titulos = filmes
   .filter((filme) => filme.oscar)
   .map((filme) => filme.nome)
