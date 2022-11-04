@@ -45,7 +45,8 @@ const titulos2 = filmes
 export default function App() {
   return (
     <div>
-      {titulos}
+      {'Filmes:'}
+      {titulos} {'Diretores:'}
       <ul>{titulos2}</ul>
     </div>
   );
