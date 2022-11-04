@@ -65,13 +65,13 @@ export default function App() {
   });
   return (
     <div>
-      {filmesParaExibir.map((filme) => {
+      {filmesParaExibir.map((filme) => (
         <div>
           <h1>{filme.nome}</h1>
           <p>Diretores:</p>
           <DiretoresParaExibir diretores={filme.diretores} />
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 }
