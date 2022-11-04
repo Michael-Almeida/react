@@ -33,25 +33,36 @@ const filmes = [
 ];
 
 //Enunciado 1
+
 const titulos = filmes
   .map((filme) => filme.nome)
   .map((nome) => <h4>{nome}</h4>);
+
 const titulos2 = filmes
   .map((filme) => filme.diretores)
-  .map((diretores) => <h5>{diretores}</h5>);
+  .map((diretores) => <li>{diretores}</li>);
 
 export default function App() {
   return (
     <div>
       {titulos}
-      {titulos2}
+      <ul>{titulos2}</ul>
     </div>
   );
 }
 
-/* const titulos = filmes
+/* 
+tentativa 2
+const titulos = filmes
   .map((filme) => (filme.nome)&& (filme.diretores))
   //.map((filme)=>filme.diretores)
   .map((nome) => <h4>{nome}</h4>)
   .map((diretores) => <h4>{diretores} </h4>)
   */
+
+/* 
+tentativa 3
+  const titulos = filmes
+  .map((filme) => {
+    const nome =filme.nome
+    const diretor = filme.diretores}) */
