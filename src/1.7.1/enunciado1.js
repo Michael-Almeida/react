@@ -32,38 +32,46 @@ const filmes = [
   },
 ];
 
-//Enunciado 1
+//resolução feita 1
 
-const titulos = filmes
+/* const titulos = filmes
   .map((filme) => filme.nome)
   .map((nome) => <h4>{nome}</h4>);
 
 const titulos2 = filmes
   .map((filme) => filme.diretores)
   .map((diretores) => <li>{diretores}</li>);
+ */
 
-export default function App() {
+//criar componentes sempre com PascalCase
+function DiretoresParaExibir(props) {
+  const { diretores } = props;
   return (
-    <div>
-      {'Filmes:'}
-      {titulos} {'Diretores:'}
-      <ul>{titulos2}</ul>
-    </div>
+    <ul>
+      {diretores.map((diretor) => (
+        <li>{diretor}</li>
+      ))}
+    </ul>
   );
 }
 
-/* 
-tentativa 2
-const titulos = filmes
-  .map((filme) => (filme.nome)&& (filme.diretores))
-  //.map((filme)=>filme.diretores)
-  .map((nome) => <h4>{nome}</h4>)
-  .map((diretores) => <h4>{diretores} </h4>)
-  */
-
-/* 
-tentativa 3
-  const titulos = filmes
-  .map((filme) => {
-    const nome =filme.nome
-    const diretor = filme.diretores}) */
+export default function App() {
+  const filmesParaExibir = filmes.map((filme) => {
+    const { nome, diretores } = filme; //destructor
+    return {
+      nome,
+      diretores,
+    };
+  });
+  return (
+    <div>
+      {filmesParaExibir.map((filme) => {
+        <div>
+          <h1>{filme.nome}</h1>
+          <p>Diretores:</p>
+          <DiretoresParaExibir diretores={filme.diretores} />
+        </div>;
+      })}
+    </div>
+  );
+}
