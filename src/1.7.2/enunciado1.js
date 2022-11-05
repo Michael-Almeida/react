@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 
 const Personagens = () => {
+  const { personagens } = props;
   const personagens = [
     'Jill Valentine',
     'Claire Redfield',
@@ -12,26 +13,17 @@ const Personagens = () => {
   ];
 
   const personagensFiltrados = personagens
-    .filter((personagem) => {
+    .filter((personagen) => {
       const EhdaFamilia = personagens.includes('Redfield');
       return EhdaFamilia;
     })
-    .map((props) => {
-      const { personagens } = props;
-      return (
-        <ul>
-          {personagens.map((personagem) => (
-            <li>{personagem}</li>
-          ))}
-        </ul>
-      );
-    });
+    .map((personagen) => <li>{props}</li>);
 
   return (
     <div>
-      <h3>personagensFiltrados</h3>
+      <h3>personagens Filtrados</h3>
       <ul>
-        {personagens.map((personagem) => (
+        {personagens.map((personagen) => (
           <li>{personagensFiltrados}</li>
         ))}
       </ul>
@@ -40,5 +32,5 @@ const Personagens = () => {
 };
 
 export default function App() {
-  return <Personagens />;
+  return <Personagens fmilia={'Redfield'} />;
 }
