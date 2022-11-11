@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Personagens = function () {
+/* const Personagens = function () {
   const { personagens } = props;
   const personagens = [
     'Jill Valentine',
@@ -29,8 +29,26 @@ const Personagens = function () {
       </ul>
     </div>
   );
-};
+}; */
+
+const personagens = [
+  'Jill Valentine',
+  'Claire Redfield',
+  'Ada Wong',
+  'Chris Redfield',
+  'Leon S. Kennedy',
+  'Albert Wesker',
+];
+
+const PersonagensFiltrados = personagens
+  .filter((personagen) => {
+    const ehDaFamilia = personagen.includes('Redfield');
+    return ehDaFamilia;
+  })
+  .map((personagen) => <li>{personagen}</li>);
 
 export default function App() {
-  return <Personagens fmilia={'Redfield'} />;
+  return;
+  /*  <Personagens fmilia={'Redfield'} />;
+   */
 }
