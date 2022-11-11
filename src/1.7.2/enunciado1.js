@@ -45,7 +45,11 @@ const PersonagensFiltrados = personagens
     const ehDaFamilia = personagen.includes('Redfield');
     return ehDaFamilia;
   })
-  .map((personagen) => <li>{personagen}</li>);
+  .map((personagen) => console.log(personagen));
+/*   .map((personagen) => <li>{personagen}</li>); */
+export const personagensRender = (props) => {
+  <li> {props.personage} </li>;
+};
 
 export default function App() {
   return;
