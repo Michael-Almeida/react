@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Personagens = () => {
+const Personagens = function () {
   const { personagens } = props;
   const personagens = [
     'Jill Valentine',
