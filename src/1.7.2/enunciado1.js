@@ -47,6 +47,7 @@ const PersonagensFiltrados = personagens
   })
   .map((personagen) => console.log(personagen));
 /*   .map((personagen) => <li>{personagen}</li>); */
+
 export const personagensRender = (props) => {
   <li> {props.personage} </li>;
 };
