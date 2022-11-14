@@ -51,7 +51,7 @@ const PersonagensFiltrados = personagens
 /*   .map((personagen) => <li>{personagen}</li>); */
 
 export const PersonagensRender = (props) => {
-  const {} = props;
+  const { personagens } = props;
   return (
     <div>
       <h3>Personagens de Resident Evil</h3>
