@@ -31,6 +31,7 @@ import './style.css';
   );
 }; */
 
+//personagens
 const personagens = [
   'Jill Valentine',
   'Claire Redfield',
@@ -40,20 +41,31 @@ const personagens = [
   'Albert Wesker',
 ];
 
+//função para filtrar ok
 const PersonagensFiltrados = personagens
-  .filter((personagen) => {
-    const ehDaFamilia = personagen.includes('Redfield');
+  .filter((personagem) => {
+    const ehDaFamilia = personagem.includes('Redfield');
     return ehDaFamilia;
   })
   .map((personagen) => console.log(personagen));
 /*   .map((personagen) => <li>{personagen}</li>); */
 
-export const personagensRender = (props) => {
-  <li> {props.personage} </li>;
+export const PersonagensRender = (props) => {
+  const {} = props;
+  return (
+    <div>
+      <h3>Personagens de Resident Evil</h3>
+      <ul>
+        {PersonagensFiltrados.map((personagem) => (
+          <li>{personagem}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default function App() {
-  return;
+  return <PersonagensRender familia={'Redefield'} />;
   /*  <Personagens fmilia={'Redfield'} />;
    */
 }
