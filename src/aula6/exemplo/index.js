@@ -3,8 +3,6 @@ import './style.css';
 
 const Card1 = (props) => {
   console.log('Card1');
-
-  return <h2>{props.titulo}</h2>;
 };
 
 const Card2 = (props) => {
