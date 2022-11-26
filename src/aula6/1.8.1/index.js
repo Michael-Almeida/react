@@ -12,22 +12,24 @@ const Personagens = () => {
     'Albert Wesker',
     'Lucas Baker',
   ];
+};
 
-  export const BotaoPersonagens = (props) => {
-    const { personagem } = props;
-    return (
-      <div>
-        <h3>Personagens de Resident Evil</h3>
-        <ul>
-          {personagens.map((personagem) => (
-            <li>{personagem}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
+export const BotaoPersonagens = (props) => {
+  const { personagem } = props;
+  return (
+    <div>
+      <h3>Personagens de Resident Evil</h3>
+      <ul>
+        {personagens.map((personagem) => (
+          <li>{personagem}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default function App() {
-  return <BotaoPersonagens />;
+  return <BotaoPersonagens batata="" />;
 }
+
+// BotqoPersonagens({batata: ''})
