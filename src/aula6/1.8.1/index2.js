@@ -24,10 +24,11 @@ const Personagens = () => {
   };
 
   const filtrarFamiliaRedfield = () => {
-    _personagens.filter((personagem) => {
+    const novoArray = _personagens.filter((personagem) => {
       const ehDaFamilia = personagem.includes('Redfield');
-      setPersonagen(ehDaFamilia);
+      return ehDaFamilia;
     });
+    setPersonagen(novoArray);
   };
 
   return (

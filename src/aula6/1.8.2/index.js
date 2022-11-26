@@ -5,6 +5,7 @@ import './style.css';
 export default function App() {
   const [adicionada, setAdicionada] = useState('');
   const [tarefas, setTarefas] = useState([]);
+
   const excluirTarefa = (index) => {
     const novasTarefas = tarefas.filter((_, _index) => _index !== index);
     setTarefas(novasTarefas);
