@@ -36,7 +36,7 @@ const Personagens = () => {
       <button onClick={filtrarFamiliaBacker}>Familia Backer</button>
       <button onClick={filtrarFamiliaRedfield}>Familia Redfield</button>
       <ul>
-        {personagens.map((personagem) => (
+        {_personagens.map((personagem) => (
           <li>{personagem}</li>
         ))}
       </ul>
