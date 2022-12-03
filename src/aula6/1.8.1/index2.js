@@ -15,7 +15,7 @@ const Personagens = () => {
   ];
 
   const [personagens, setPersonagen] = useState(_personagens);
-
+  //s
   const filtrarFamiliaBacker = () => {
     _personagens.filter((personagem) => {
       const ehDaFamilia = personagem.includes('Baker');
