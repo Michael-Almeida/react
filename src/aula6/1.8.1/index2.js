@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './style.css';
 
+//componente
 const Personagens = () => {
   const _personagens = [
     'Jill Valentine',
@@ -14,13 +15,15 @@ const Personagens = () => {
     'Lucas Baker',
   ];
 
+  //usando state
   const [personagens, setPersonagen] = useState(_personagens);
-  //s
+
   const filtrarFamiliaBacker = () => {
-    _personagens.filter((personagem) => {
+    const novoArray = _personagens.filter((personagem) => {
       const ehDaFamilia = personagem.includes('Baker');
-      setPersonagen(ehDaFamilia);
+      return ehDaFamilia;
     });
+    setPersonagen(novoArray);
   };
 
   const filtrarFamiliaRedfield = () => {
@@ -34,10 +37,12 @@ const Personagens = () => {
   return (
     <div>
       <h3>Personagens de Resident Evil</h3>
-      <button onClick={filtrarFamiliaBacker}>Familia Backer</button>
-      <button onClick={filtrarFamiliaRedfield}>Familia Redfield</button>
+      <div>
+        <button onClick={filtrarFamiliaBacker}>Familia Backer</button>
+        <button onClick={filtrarFamiliaRedfield}>Familia Redfield</button>
+      </div>
       <ul>
-        {_personagens.map((personagem) => (
+        {personagens.map((personagem) => (
           <li>{personagem}</li>
         ))}
       </ul>
