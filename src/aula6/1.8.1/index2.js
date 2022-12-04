@@ -34,12 +34,27 @@ const Personagens = () => {
     setPersonagen(novoArray);
   };
 
+  const todosPersonagens = () => {
+    const novoArray = _personagens.filter((personagem) => {
+      const ehDaFamilia = personagem;
+      return ehDaFamilia;
+    });
+    setPersonagen(novoArray);
+  };
+
   return (
     <div>
       <h3>Personagens de Resident Evil</h3>
       <div>
-        <button onClick={filtrarFamiliaBacker}>Familia Backer</button>
-        <button onClick={filtrarFamiliaRedfield}>Familia Redfield</button>
+        <button id="backer" onClick={filtrarFamiliaBacker}>
+          Familia Backer
+        </button>
+        <button id="redfiel" onClick={filtrarFamiliaRedfield}>
+          Familia Redfield
+        </button>
+        <button id="todos" onClick={todosPersonagens}>
+          Todos personagens
+        </button>
       </div>
       <ul>
         {personagens.map((personagem) => (
