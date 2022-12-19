@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import {useEffect , useState } from 'react';
 import './style.css';
 
 export default function App() {
@@ -16,6 +16,12 @@ export default function App() {
     setTarefas(tarefas);
     setAdicionada('');
   };
+
+  async function getTarefas() {
+    const url = 'https://68jb68bukl.execute-api.sa-east-1.amazonaws.com/tasks';
+    const resultado = await axios.get(url);
+    console.log(resultado.data);
+  }
 
   return (
     <div class="App">
